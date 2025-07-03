@@ -70,9 +70,9 @@ if option == "Quotation Summary":
     st.subheader("Enter Quantities for Items")
 
     # Static UI for item selection, similar to proforma receipts
-    quantity_pt_pro = st.number_input("12 HP PT Pro", min_value=1, step=1, value=0, key="quote_qty_pt_pro")
-    quantity_battery = st.number_input("Battery Sets", min_value=1, step=1, value=0, key="quote_qty_battery")
-    quantity_charger = st.number_input("Fast Chargers", min_value=2, step=1, value=0, key="quote_qty_charger")
+    quantity_pt_pro = st.number_input("12 HP PT Pro", min_value=0, step=1, value=1, key="quote_qty_pt_pro")
+    quantity_battery = st.number_input("Battery Sets", min_value=0, step=1, value=1, key="quote_qty_battery")
+    quantity_charger = st.number_input("Fast Chargers", min_value=0, step=1, value=2, key="quote_qty_charger")
     quantity_blade_weeding = st.number_input("1 Set of Sugarcane Blades(Weeding)", min_value=0, step=1, value=0, key="quote_qty_blade_weeding")
     quantity_blade_earthing = st.number_input("1 Set of Sugarcane Blades(Earthing-up)", min_value=0, step=1, value=0, key="quote_qty_blade_earthing")
     quantity_tyres = st.number_input("1 Set of Tyres (5x10)", min_value=0, step=1, value=0, key="quote_qty_tyres")
@@ -229,13 +229,13 @@ elif option == "Partial Proforma Receipt":
     st.subheader("Enter Quantities for Items (Minimum quantities enforced)")
 
     quantity_pt_pro = st.number_input(
-        "12 HP PT Pro incl Dead Weight", min_value=1, step=1, value=1, key="qty_pt_pro"
+        "12 HP PT Pro incl Dead Weight", min_value=0, step=1, value=1, key="qty_pt_pro"
     )
     quantity_battery = st.number_input(
-        "Battery Sets", min_value=1, step=1, value=1, key="qty_battery"
+        "Battery Sets", min_value=0, step=1, value=1, key="qty_battery"
     )
     quantity_charger = st.number_input(
-        "Fast Chargers", min_value=2, step=1, value=2, key="qty_charger"
+        "Fast Chargers", min_value=0, step=1, value=2, key="qty_charger"
     )
     quantity_blade_weeding = st.number_input(
         "1 Set of Sugarcane Blades(Weeding) including Extended Shaft", min_value=0, step=1, value=0, key="qty_blade_weeding"
@@ -364,13 +364,13 @@ elif option == "Full Proforma Receipt":
     st.subheader("Enter Quantities for Items (Minimum quantities enforced)")
 
     quantity_pt_pro = st.number_input(
-        "12 HP PT Pro incl Dead Weight", min_value=1, step=1, value=1, key="qty_pt_pro"
+        "12 HP PT Pro incl Dead Weight", min_value=0, step=1, value=1, key="qty_pt_pro"
     )
     quantity_battery = st.number_input(
-        "Battery Sets", min_value=1, step=1, value=1, key="qty_battery"
+        "Battery Sets", min_value=0, step=1, value=1, key="qty_battery"
     )
     quantity_charger = st.number_input(
-        "Fast Chargers", min_value=2, step=1, value=2, key="qty_charger"
+        "Fast Chargers", min_value=0, step=1, value=2, key="qty_charger"
     )
     quantity_blade_weeding = st.number_input(
         "1 Set of Sugarcane Blades(Weeding) including Extended Shaft", min_value=0, step=1, value=0, key="qty_blade_weeding"
