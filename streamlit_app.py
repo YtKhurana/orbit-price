@@ -229,7 +229,7 @@ elif option == "Partial Proforma Receipt":
     st.subheader("Enter Quantities for Items (Minimum quantities enforced)")
 
     quantity_pt_pro = st.number_input(
-        "12 HP PT Pro incl Dead Weight", min_value=0, step=1, value=1, key="qty_pt_pro"
+        "12 HP PT Pro", min_value=0, step=1, value=1, key="qty_pt_pro"
     )
     quantity_battery = st.number_input(
         "Battery Sets", min_value=0, step=1, value=1, key="qty_battery"
@@ -238,16 +238,16 @@ elif option == "Partial Proforma Receipt":
         "Fast Chargers", min_value=0, step=1, value=2, key="qty_charger"
     )
     quantity_blade_weeding = st.number_input(
-        "1 Set of Sugarcane Blades(Weeding) including Extended Shaft", min_value=0, step=1, value=0, key="qty_blade_weeding"
+        "1 Set of Sugarcane Blades(Weeding)", min_value=0, step=1, value=0, key="qty_blade_weeding"
     )
     quantity_blade_earthing = st.number_input(
-        "1 Set of Sugarcane Blades(Earthing-up) including Extended Shaft", min_value=0, step=1, value=0, key="qty_blade_earthing"
+        "1 Set of Sugarcane Blades(Earthing-up)", min_value=0, step=1, value=0, key="qty_blade_earthing"
     )
     quantity_tyres = st.number_input(
         "1 Set of Tyres (5x10)", min_value=0, step=1, value=0, key="qty_tyres"
     )
     quantity_toolkit = st.number_input(
-        "Toolkit: Spanner, Gloves, Gum Boots", min_value=0, step=1, value=0, key="qty_toolkit"
+        "Toolkit", min_value=0, step=1, value=0, key="qty_toolkit"
     )
     quantity_ginger = st.number_input(
         "Ginger Kit", min_value=0, step=1, value=0, key="qty_ginger"
@@ -364,7 +364,7 @@ elif option == "Full Proforma Receipt":
     st.subheader("Enter Quantities for Items (Minimum quantities enforced)")
 
     quantity_pt_pro = st.number_input(
-        "12 HP PT Pro incl Dead Weight", min_value=0, step=1, value=1, key="qty_pt_pro"
+        "12 HP PT Pro", min_value=0, step=1, value=1, key="qty_pt_pro"
     )
     quantity_battery = st.number_input(
         "Battery Sets", min_value=0, step=1, value=1, key="qty_battery"
@@ -373,16 +373,16 @@ elif option == "Full Proforma Receipt":
         "Fast Chargers", min_value=0, step=1, value=2, key="qty_charger"
     )
     quantity_blade_weeding = st.number_input(
-        "1 Set of Sugarcane Blades(Weeding) including Extended Shaft", min_value=0, step=1, value=0, key="qty_blade_weeding"
+        "1 Set of Sugarcane Blades(Weeding)", min_value=0, step=1, value=0, key="qty_blade_weeding"
     )
     quantity_blade_earthing = st.number_input(
-        "1 Set of Sugarcane Blades(Earthing-up) including Extended Shaft", min_value=0, step=1, value=0, key="qty_blade_earthing"
+        "1 Set of Sugarcane Blades(Earthing-up)", min_value=0, step=1, value=0, key="qty_blade_earthing"
     )
     quantity_tyres = st.number_input(
         "1 Set of Tyres (5x10)", min_value=0, step=1, value=0, key="qty_tyres"
     )
     quantity_toolkit = st.number_input(
-        "Toolkit: Spanner, Gloves, Gum Boots", min_value=0, step=1, value=0, key="qty_toolkit"
+        "Toolkit", min_value=0, step=1, value=0, key="qty_toolkit"
     )
     quantity_ginger = st.number_input(
         "Ginger Kit", min_value=0, step=1, value=0, key="qty_ginger"
