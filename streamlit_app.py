@@ -13,7 +13,7 @@ option = st.radio("Select Document Type:", ["Quotation Summary", "Partial Profor
 # Option 1: Quotation Summary (MODIFIED)
 # ----------------------------------------------------------------------
 if option == "Quotation Summary":
-    from docxtpl import DocxTemplate, RichText
+    from docxtpl import DocxTemplate
     from datetime import datetime
 
     TEMPLATE_PATH = "Orbit Agritech Quotation Summary.docx"
@@ -156,12 +156,12 @@ if option == "Quotation Summary":
             else:
                 doc = DocxTemplate(TEMPLATE_PATH)
                 context = {
-                    "receipt_no": RichText(receipt_no, bold=True),
-                    "date": RichText(date, bold=True),
-                    "customer_name": RichText(customer_name, bold=True),
-                    "address_line1": RichText(customer_address, bold=True),
-                    "phone": RichText(customer_phone, bold=True),
-                    "email": RichText(email if email else "N/A", bold=True),
+                    "receipt_no": receipt_no,
+                    "date": date,
+                    "customer_name": customer_name,
+                    "address_line1": customer_address,
+                    "phone": customer_phone,
+                    "email": email if email else "N/A",
                     "total_price": f"Rs {total_price:,.0f}",
                     "subsidy": f"Rs {selected_subsidy:,.0f}",
                     "final_price": f"Rs {final_price:,.0f}",
@@ -191,7 +191,7 @@ if option == "Quotation Summary":
 # Option 2: Proforma Receipt
 # ----------------------------------------------------------------------
 elif option == "Partial Proforma Receipt":
-    from docxtpl import DocxTemplate, RichText
+    from docxtpl import DocxTemplate
     from datetime import datetime
 
     TEMPLATE_PATH = "Orbit Agritech Proforma Receipt Partial.docx"
@@ -277,18 +277,18 @@ elif option == "Partial Proforma Receipt":
             doc = DocxTemplate(TEMPLATE_PATH)
 
             context = {
-                "receipt_no": RichText(receipt_no, bold=True),
-                "date": RichText(date, bold=True),
-                "customer_name": RichText(customer_name, bold=True),
-                "address_line1": RichText(address_line1, bold=True),
-                "phone": RichText(phone, bold=True),
-                "email": RichText(email if email else "N/A", bold=True),
-                "amount_received": RichText(amount_received, bold=True),
-                "payment_mode": RichText(final_payment_mode, bold=True),
-                "reference_id": RichText(reference_id if reference_id else "N/A", bold=True),
-                "payment_date": RichText(payment_date, bold=True),
-                "balance_due": RichText(balance_due, bold=True),
-                "tentative_delivery": RichText(tentative_delivery, bold=True),
+                "receipt_no": receipt_no,
+                "date": date,
+                "customer_name": customer_name,
+                "address_line1": address_line1,
+                "phone": phone,
+                "email": email if email else "N/A",
+                "amount_received": amount_received,
+                "payment_mode": final_payment_mode,
+                "reference_id": reference_id if reference_id else "N/A",
+                "payment_date": payment_date,
+                "balance_due": balance_due,
+                "tentative_delivery": tentative_delivery,
 
                 # Quantities passed as placeholders
                 "quantity_pt_pro": quantity_pt_pro,
@@ -327,7 +327,7 @@ elif option == "Partial Proforma Receipt":
 # Option 3: FULL Proforma Receipt
 # ----------------------------------------------------------------------
 elif option == "Full Proforma Receipt":
-    from docxtpl import DocxTemplate, RichText
+    from docxtpl import DocxTemplate
     from datetime import datetime
 
     TEMPLATE_PATH = "Orbit Agritech Proforma Receipt Full.docx"
@@ -412,18 +412,18 @@ elif option == "Full Proforma Receipt":
             doc = DocxTemplate(TEMPLATE_PATH)
 
             context = {
-                "receipt_no": RichText(receipt_no, bold=True),
-                "date": RichText(date, bold=True),
-                "customer_name": RichText(customer_name, bold=True),
-                "address_line1": RichText(address_line1, bold=True),
-                "phone": RichText(phone, bold=True),
-                "email": RichText(email if email else "N/A", bold=True),
-                "amount_received": RichText(amount_received, bold=True),
-                "payment_mode": RichText(final_payment_mode, bold=True),
-                "reference_id": RichText(reference_id if reference_id else "N/A", bold=True),
-                "payment_date": RichText(payment_date, bold=True),
-                # "balance_due": RichText(balance_due, bold=True),
-                "delivery_date": RichText(delivery_date, bold=True),
+                "receipt_no": receipt_no,
+                "date": date,
+                "customer_name": customer_name,
+                "address_line1": address_line1,
+                "phone": phone,
+                "email": email if email else "N/A",
+                "amount_received": amount_received,
+                "payment_mode": final_payment_mode,
+                "reference_id": reference_id if reference_id else "N/A",
+                "payment_date": payment_date,
+                # "balance_due": balance_due,
+                "delivery_date": delivery_date,
 
                 # Quantities passed as placeholders
                 "quantity_pt_pro": quantity_pt_pro,
